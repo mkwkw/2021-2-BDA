@@ -1,56 +1,66 @@
 <html>
   <head>
-    <style>
-      body {
-        font-family: Consolas, monospace;
-        font-family: 12px;
-      }
-      table {
-        width: 100%;
-      }
-      th, td {
-        padding: 10px;
-        border-bottom: 1px solid #dadada;
-        text-align: center;
-      }
-    </style>
+
   </head>
   <body>
-    One Line Bulletin Board
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Board</th>
-          <th>View</th>
-          <th>Edit/Delete</th>
-        </tr>
-      </thead>
-      <tbody>
+    <section>
+      <h3>
+        One Line Bulletin Board
+      </h3>
+      <ul id="bulletin_board">
+        <li>
+          <span class="col1"> ID </span>
+          <span calss="col2"> Board </span>
+          <span class="col3"> Hit </span>
+          <span class="col4"> Edit/Delete </span>
+        </li>
+
         <?php
-          $mysqli = mysqli_connect( "localhost", "team01", "team01", "team01" );
-          $sql = "select * from board";
-          $res = mysqli_query( $mysqli, $sql );
-
-          if($res){
-            while( $row = mysqli_fetch_array( $res ) ) {
-              $edit_delete = '
-              <form action="edit_delete.php" method="post">
-                <input type="hidden" name="text_id" value=" ' . $row['text_id'] . '">
-                <input type="submit" value="Edit/Delete">
-              </form>
-              ';
-              echo '<tr><td>' .$row['text_id']. '</td><td>'.$row['text']. '</td><td>' .$row['view']. '</td><td>' .$edit_delete. '</td></tr>';
-            }
+          $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
+          if(mysqli_connect_errno()){
+            printf("Connect failed: %s\n", mysqli_connect_error());
+            exit();
           }
+          else{
+            $sql = "select * from board order by text_id";
+            $res = mysqli_query($mysqli, $sql);
+
+            if($res){
+              $total_records = mysqli_num_rows($res);
+              while( $row = mysqli_fetch_array( $res ) ) {
+                $num = $row['text_id'];
+                $content = $row['text'];
+
+                $hit = $row['view'];
+                $edit_delete = '
+                  <form action="EditDeletePage.php" method="get">
+                    <input type="hidden" name="num" value=" ' . $row['text_id'] . '">
+                    <input type="submit" value="Edit/Delete">
+                  </form>
+                ';
         ?>
-      </tbody>
-    </table>
+              <li>
+                <span class="col1"><?=$num?></span>
+                <span calss="col2"><a href="HitCount.php?num=<?=$num?>"><?=$content?></a></span>
+                <span class="col3"><?=$hit?></span>
+                <span class="col4"><?=$edit_delete?></span>
+              </li>
+
+        <?php
+                }
+                mysqli_close($mysqli);
+              }
+            }
+
+         ?>
+
+         <ul>
+           <li><button onclick="location.href='WritePage.html'">Write</button></li>
+
+         </ul>
+       </section>
 
 
-    <form action="write_page.html">
-      <input type="submit" value="Write">
-    </form>
 
 
   </body>
