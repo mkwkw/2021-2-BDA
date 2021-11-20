@@ -91,18 +91,21 @@
             }
 
             else{
-                $sql = "select dense_rank() over (
-                    order by count(A.menu_id) desc) as ranking, B.menu_name
-                    from top A join menu B on A.menu_id=B.menu_id
-                    group by A.menu_id";
+                $sql = "select B.menu_name
+                  from ( select menu_id, service_code, count(menu_id) as num
+                    from top group by menu_id, service_code with rollup) A
+                    join menu B on A.menu_id = B.menu_id
+                    group by A.service_code, B.menu_name
+                    order by A.menu_id is null, A.service_code, A.num desc
+                    Limit 51;";
                 $res = mysqli_query($mysqli, $sql);
                 if($res){
                     $idx=0;
                     while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
 
-                        $ranking = $newArray['ranking'];
+
                         $menu_name = $newArray['menu_name'];
-                        echo $ranking." ".$menu_name. "&nbsp";
+                        echo ($idx+1)."&nbsp".$menu_name. "&nbsp";
 
                         $idx++;
 
@@ -610,13 +613,10 @@
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
 
-            $sql = "select B.menu_name
-            from ( select menu_id, service_code, count(menu_id) as num
-              from top group by menu_id, service_code with rollup) A
-              join menu B on A.menu_id = B.menu_id
-              group by A.service_code, B.menu_name
-              order by A.menu_id is null, A.service_code, A.num desc
-              Limit 51";
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+            where A.month_code=12
+            group by A.menu_id";
 
             $res = mysqli_query($mysqli, $sql);
 
