@@ -63,7 +63,7 @@
                 <form action="BestFood.php">
                     <input type="submit" value="Best 5 foods" id="button" >
                 </form>
-                
+
                 <form action="EntireRanking.php">
                     <input type="submit" value="Ranking of all menus" id="button">
                 </form>
@@ -83,7 +83,7 @@
         <div class="column">
             <div class="subtitle"> Gyeongbu Expressway - Manghyang (Busan) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 망향 서비스 13번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -97,7 +97,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -114,11 +114,11 @@
                 }
                 ?>
             </div>
-            
+
             <div class="column">
             <div class="subtitle"> Gyeongbu Expressway - Anseong (Seoul) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 안성 서비스 7번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -132,7 +132,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -154,7 +154,7 @@
             <div class="column">
             <div class="subtitle"> Gyeongbu Expressway - Cheonan Intersection (Seoul) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 천안삼거리 서비스 15번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -168,7 +168,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -191,7 +191,7 @@
         <div class="column">
         <div class="subtitle"> Honam Expressway - Yeosan (Cheonan) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 여산 서비스 15번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -205,7 +205,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -226,7 +226,7 @@
             <div class="column">
             <div class="subtitle"> Honam Expressway - Hwangjeon (Suncheon) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 황천 서비스 15번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -240,7 +240,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -261,7 +261,7 @@
             <div class="column">
             <div class="subtitle"> Honam Expressway - Beolgok (Daejeon) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 별곡 서비스 15번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -299,7 +299,7 @@
             <div class="column">
             <div class="subtitle"> Yeongdong Expressway - Munmak (Gangneung) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 문악 서비스 201번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -313,7 +313,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -334,7 +334,7 @@
             <div class="column">
             <div class="subtitle"> Yeongdong Expressway - Pyeongchang (Gangneung) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 평창 서비스 459
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -348,7 +348,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -369,7 +369,7 @@
             <div class="column">
             <div class="subtitle"> Yeongdong Expressway - Yeoju (Gangneung) Rest Area </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 여주 서비스 203번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -383,7 +383,7 @@
                         ORDER BY count(A.menu_id) DESC
                         LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -408,8 +408,8 @@
             <div class="column">
             <div class="subtitle"> Gyeongbu Expressway </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
-                
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
+
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
                     exit();
@@ -417,15 +417,15 @@
                 //WHERE  service_code=7 OR service_code=13 OR service_code=15
                 else{
                     $sql = "SELECT A.line_id, B.menu_id, C.menu_name
-                    from service A 
-                    join top B on A.service_code = B.service_code 
+                    from service A
+                    join top B on A.service_code = B.service_code
                     join menu C on B.menu_id=C.menu_id
-                    group by A.line_id, B.menu_id 
-                    having A.line_id=1 
+                    group by A.line_id, B.menu_id
+                    having A.line_id=1
                     order by count(B.menu_id) desc
                     LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -446,7 +446,7 @@
             <div class="column">
             <div class="subtitle"> Honam Expressway </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 안성 서비스 7번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -454,15 +454,15 @@
                 }
                 else{
                     $sql = "SELECT A.line_id, B.menu_id, C.menu_name
-                    from service A 
-                    join top B on A.service_code = B.service_code 
+                    from service A
+                    join top B on A.service_code = B.service_code
                     join menu C on B.menu_id=C.menu_id
-                    group by A.line_id, B.menu_id 
+                    group by A.line_id, B.menu_id
                     having A.line_id=2
                     order by count(B.menu_id) desc
                     LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -483,7 +483,7 @@
             <div class="column">
             <div class="subtitle"> GYeongdong Expressway </div>
                 <?php
-                $conn= mysqli_connect("127.0.0.1", "root", "jieun", "test");
+                $conn= mysqli_connect("localhost", "team01", "team01", "team01");
                     // 안성 서비스 7번
                 if (mysqli_connect_errno()) {
                     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -491,15 +491,15 @@
                 }
                 else{
                     $sql = "SELECT A.line_id, B.menu_id, C.menu_name
-                    from service A 
-                    join top B on A.service_code = B.service_code 
+                    from service A
+                    join top B on A.service_code = B.service_code
                     join menu C on B.menu_id=C.menu_id
-                    group by A.line_id, B.menu_id 
+                    group by A.line_id, B.menu_id
                     having A.line_id=3
                     order by count(B.menu_id) desc
                     LIMIT 5
                     ";
-                    
+
                     $res = mysqli_query($conn,$sql);
                     $cnt=1;
                     if($res->num_rows>0){
@@ -517,7 +517,7 @@
                 ?>
             </div>
             </div>
-       
+
 
         </BODY>
     </HTML>
