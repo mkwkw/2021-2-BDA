@@ -149,7 +149,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -192,7 +192,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -235,7 +235,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -278,7 +278,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -321,7 +321,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -364,7 +364,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -407,7 +407,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -450,7 +450,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -493,7 +493,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -536,7 +536,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -579,7 +579,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
@@ -622,7 +622,7 @@
 
             if($res){
 
-                $idx=1;
+                $idx=0;
 
                 while($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                     $ranking = $newArray['ranking'];
