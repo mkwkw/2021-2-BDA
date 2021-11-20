@@ -1,7 +1,7 @@
 <?php
   $num = $_GET["num"];
-  $content = $_POST["content"];
-  $password = $_POST["pw"];
+  $content = $_POST["content1"];
+  $password = $_POST["pw1"];
 
   $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
   if(mysqli_connect_errno()){
@@ -9,9 +9,7 @@
     exit();
   }
   else{
-    $sql1 = "update board set text='$content'";
-    $sql1 .= "where text_id=$num";
-
+    $sql1 = "update board set text='$content' where text_id=$num";
     $sql2 = "update pw set password='$password' where pw_id=$num";
     mysqli_query($mysqli, $sql1);
     mysqli_query($mysqli, $sql2);

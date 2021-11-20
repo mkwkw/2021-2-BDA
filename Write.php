@@ -1,6 +1,5 @@
 <html>
   <head>
-
   </head>
   <body>
     <?php
@@ -17,7 +16,7 @@
         if($res1===TRUE && $res2===TRUE){
           echo "A record has been inserted.";
           $list = '
-              <form action="bulletin_board.php" method="POST">
+              <form action="BulletinBoard.php" method="POST">
                 <input type="submit" value="List">
               </form>
             ';
@@ -27,14 +26,10 @@
         }
         else{
           printf("Could not insert record: %s\n",mysqli_error($mysqli));
-
         }
-
 
         mysqli_close($mysqli);
       }
-
      ?>
-
   </body>
 </html>

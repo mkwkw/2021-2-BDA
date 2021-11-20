@@ -1,13 +1,27 @@
 <html>
   <head>
-    <title></title>
+    <script>
+      function check_input1(){
+        if(!document.write_form.pw.value){
+          alert("Enter your password");
+          doocument.write_form.pw.focus();
+          return;
+        }
+        if(!document.write_form.content.value){
+          alert("Enter text");
+          document.write_form.content.focus();
+          return;
+        }
+        document.write_form.submit();
+      }
+    </script>
   </head>
   <body>
     WRITE
-    <form action="write.php" method="post">
+    <form name="write_form" action="write.php" method="post">
       Password(Integer): <input type="text" name="pw"><br>
       Content: <input type="text" name="content"><br>
-      <input type="submit" value="Save">
+      <button type="button" onclick="check_input1()">Save</button></li>
     </form>
   </body>
 </html>

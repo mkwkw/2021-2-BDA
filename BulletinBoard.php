@@ -53,15 +53,9 @@
             }
 
          ?>
-
          <ul>
            <li><button onclick="location.href='WritePage.html'">Write</button></li>
-
          </ul>
        </section>
-
-
-
-
   </body>
 </html>
