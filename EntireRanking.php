@@ -610,9 +610,13 @@
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
 
-            $sql = "select dense_rank() over (order by A.num desc) as ranking, B.menu_name from ( select menu_id, service_code, count(menu_id) as num 
-                    from top group by menu_id, service_code with rollup) A join menu B on A.menu_id = B.menu_id 
-                    group by A.service_code, B.menu_name order by A.menu_id is null, A.service_code, ranking Limit 51";
+            $sql = "select B.menu_name
+            from ( select menu_id, service_code, count(menu_id) as num
+              from top group by menu_id, service_code with rollup) A
+              join menu B on A.menu_id = B.menu_id
+              group by A.service_code, B.menu_name
+              order by A.menu_id is null, A.service_code, A.num desc
+              Limit 51";
 
             $res = mysqli_query($mysqli, $sql);
 
