@@ -18,7 +18,8 @@
                 align-items: center;
                 font-size: 1rem;
                 flex-direction: row;
-                margin-bottom: 4rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
             }
             .title{
                 width: 100%;
@@ -44,17 +45,46 @@
                 margin-bottom: 1rem;
                 font-weight: bold;
             }
+            #button {
+                font-size: 16;
+                border:none;
+                border-radius: 10px;
+                height:6ex;
+                outline: none;
+                font-weight: bold;
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+                background-color: #64A68C;
+            }
     </STYLE>
   </head>
 
   <body>
 
+  <div class="row">
+                <form action="BestFood.php">
+                    <input type="submit" value="Best 5 foods" id="button" >
+                </form>
+                
+                <form action="EntireRanking.php">
+                    <input type="submit" value="Ranking of all menus" id="button">
+                </form>
+
+                <form action="FvFoods.php">
+                    <input type="submit" value="My favorite food" id="button">
+                </form>
+
+                <form action="Bulletinboard.php">
+                    <input type="submit" value="Food recommendation board" id="button" >
+                </form>
+  </div>
+
   <div class="title"> Entire Service Area Food Ranking </div>
   <div class="subtitle"> ranking | menu name </div>
 
-        <div class="column">
+        <div class="column"> 
             <?php
-            $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
+            $mysqli = mysqli_connect("127.0.0.1", "root", "jieun", "test");
 
             if(mysqli_connect_errno())
             {
@@ -64,8 +94,8 @@
 
             else{
                 $sql = "select dense_rank() over (
-                    order by count(A.menu_id) desc) as ranking, B.menu_name
-                    from top A join menu B on A.menu_id=B.menu_id
+                    order by count(A.menu_id) desc) as ranking, B.menu_name 
+                    from top A join menu B on A.menu_id=B.menu_id 
                     group by A.menu_id";
                 $res = mysqli_query($mysqli, $sql);
                 if($res){
@@ -98,9 +128,8 @@
     <div class="title"> January </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -108,9 +137,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=1
             group by A.menu_id";
 
@@ -141,9 +170,8 @@
     <div class="title"> February </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -151,9 +179,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=2
             group by A.menu_id";
 
@@ -184,9 +212,8 @@
     <div class="title"> March </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -194,9 +221,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=3
             group by A.menu_id";
 
@@ -227,9 +254,8 @@
     <div class="title"> April </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -237,9 +263,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=4
             group by A.menu_id";
 
@@ -270,9 +296,8 @@
     <div class="title"> May </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -280,9 +305,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=5
             group by A.menu_id";
 
@@ -313,9 +338,8 @@
     <div class="title"> June </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -323,9 +347,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=6
             group by A.menu_id";
 
@@ -356,9 +380,8 @@
     <div class="title"> July </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -366,9 +389,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=7
             group by A.menu_id";
 
@@ -399,9 +422,8 @@
     <div class="title"> August </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -409,9 +431,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=8
             group by A.menu_id";
 
@@ -442,9 +464,8 @@
     <div class="title"> September </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -452,9 +473,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=9
             group by A.menu_id";
 
@@ -485,9 +506,8 @@
     <div class="title"> October </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -495,9 +515,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=10
             group by A.menu_id";
 
@@ -511,7 +531,7 @@
                     $ranking = $newArray['ranking'];
                     $menu_name = $newArray['menu_name'];
 
-                    printf("%2d %s", $ranking, $menu_name);
+                    printf("%02d %s", $ranking, $menu_name);
 
                     $idx++;
 
@@ -528,9 +548,8 @@
     <div class="title"> November </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -538,9 +557,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=11
             group by A.menu_id";
 
@@ -554,7 +573,7 @@
                     $ranking = $newArray['ranking'];
                     $menu_name = $newArray['menu_name'];
 
-                    printf("%2d %s", $ranking, $menu_name);
+                    printf("%02d %s", $ranking, $menu_name);
 
                     $idx++;
 
@@ -571,9 +590,8 @@
     <div class="title"> December </div>
     <div class="subtitle"> ranking | menu name </div>
 
-    <div class="column">
+    <div class="column"> 
     <?php
-        $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
 
         if(mysqli_connect_errno())
         {
@@ -581,9 +599,9 @@
             exit();
         }
         //$monthly = array("January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December");
-
-            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking,
-            B.menu_name from top A join menu B on A.menu_id=B.menu_id
+        
+            $sql = "select dense_rank() over (order by count(A.menu_id) desc) as ranking, 
+            B.menu_name from top A join menu B on A.menu_id=B.menu_id 
             where A.month_code=12
             group by A.menu_id";
 
@@ -597,7 +615,7 @@
                     $ranking = $newArray['ranking'];
                     $menu_name = $newArray['menu_name'];
 
-                    printf("%2d %s", $ranking, $menu_name);
+                    printf("%02d %s", $ranking, $menu_name);
 
                     $idx++;
 
