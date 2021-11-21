@@ -63,7 +63,7 @@
   <div class="row">
   <div class="subtitle">
     <?php
-      $mysqli = mysqli_connect("127.0.0.1", "root", "jieun", "test");
+      $mysqli = mysqli_connect("localhost", "team01", "team01", "team01");
       if(mysqli_connect_errno()){
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
