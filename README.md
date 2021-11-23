@@ -5,7 +5,7 @@
 ## DB 구축
 ***
 ### DB ER Diagram
-### DB 구성
+### DB 구성     
 
 ## PHP 파일 구성
 ***
