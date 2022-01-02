@@ -16,11 +16,11 @@
 ![image](https://user-images.githubusercontent.com/76611903/147883344-18b9507b-a9db-4536-8a78-e9944b48ba20.png)
 
 ### EntireRanking.php (전체 휴게소 전체 기간 인기음식 순위 및 월별 인기음식 순위) 
-![image](https://user-images.githubusercontent.com/76611903/147883452-ca5f4bbc-3166-4b4e-8cab-23bed1e0a0fa.png)
-![image](https://user-images.githubusercontent.com/76611903/147883474-ed55135b-2a25-4ebf-891a-0298cbddad53.png)
-![image](https://user-images.githubusercontent.com/76611903/147883503-a8db0b08-191f-42c8-af30-93d6c8f8c3d5.png)
-![image](https://user-images.githubusercontent.com/76611903/147883512-0e58a5b0-ba6e-48f8-95d7-45d3589fc2ea.png)
-![image](https://user-images.githubusercontent.com/76611903/147883529-c9f582bb-1611-4e5c-b4dd-16be0959fbb1.png)
+![image](https://user-images.githubusercontent.com/76611903/147884031-a15dad44-3f4a-4016-a048-8b2da030b25f.png)
+![image](https://user-images.githubusercontent.com/76611903/147884059-f2bd2877-2373-4db2-b7f8-8a148c4c5380.png)
+![image](https://user-images.githubusercontent.com/76611903/147884073-4c4f3961-45d7-453c-a404-0b3970f653ce.png)
+![image](https://user-images.githubusercontent.com/76611903/147884078-751e9a65-ee3e-4291-821a-1a91b331b808.png)
+![image](https://user-images.githubusercontent.com/76611903/147884090-d042a62c-f29d-4ea0-b093-aad74f2d202f.png)
 
 ### FvFoods.php (전체 인기음식 TOP5 중 사용자가 먹고싶은 메뉴 담을 수 있는 기능)
 ![image](https://user-images.githubusercontent.com/76611903/147883910-122bd11a-5b92-44aa-89b9-5f57a9e0de26.png)
