@@ -20,6 +20,7 @@
 ![image](https://user-images.githubusercontent.com/76611903/147884059-f2bd2877-2373-4db2-b7f8-8a148c4c5380.png)
 ![image](https://user-images.githubusercontent.com/76611903/147884073-4c4f3961-45d7-453c-a404-0b3970f653ce.png)
 ![image](https://user-images.githubusercontent.com/76611903/147884078-751e9a65-ee3e-4291-821a-1a91b331b808.png)
+***
 ![image](https://user-images.githubusercontent.com/76611903/147884090-d042a62c-f29d-4ea0-b093-aad74f2d202f.png)
 
 ### FvFoods.php (전체 인기음식 TOP5 중 사용자가 먹고싶은 메뉴 담을 수 있는 기능)
