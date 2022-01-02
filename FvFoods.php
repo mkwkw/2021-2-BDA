@@ -121,13 +121,13 @@
             $item_array_id = array_column($_SESSION["favorite_list"],"ranking");
 
             if(!in_array($_GET["ranking"], $item_array_id)){
-                $count = count($_SESSION["favorite_list"]);
+                $cnt = count($_SESSION["favorite_list"]);
                 $item_array = array(
                     'ranking' => $_GET["ranking"],
                     'menu_name' => $_POST["menu_name"]
                 );
 
-            $_SESSION["favorite_list"][$count] = $item_array;
+            $_SESSION["favorite_list"][$cnt] = $item_array;
 
             }else{
             echo '<script>alert("There Is Same Menu")</script>';
@@ -138,7 +138,7 @@
             'ranking' => $_GET["ranking"],
             'menu_name' => $_POST["menu_name"]
             );
-            $_SESSION["favorite_list"][$count] = $item_array;
+            $_SESSION["favorite_list"][$cnt] = $item_array;
         }
     }
 
